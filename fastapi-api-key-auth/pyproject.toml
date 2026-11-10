@@ -1,0 +1,33 @@
+[project]
+name = "fastapi-api-key-auth"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies= [
+	"fastapi",
+	"uvicorn",
+]
+
+[project.optional-dependencies]
+dev = [
+	"httpx",
+	"mypy",
+	"pytest",
+	"ruff",
+]
+
+[build-system]
+requires= ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+
+[tool.setuptools]
+py-modules= ["main"]
+
+
+
+
+
+
+
+
