@@ -1,4 +1,3 @@
-cat > README.md <<'EOF'
 # 🔐 Keycloak Login with FastAPI
 
 A beginner Python project demonstrating OpenID Connect login.
