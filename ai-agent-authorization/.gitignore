@@ -1,0 +1,19 @@
+# python environ
+.venv/
+
+# python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# local config and secrets
+.env
+.env.*
+!.env.example
+
+# editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
