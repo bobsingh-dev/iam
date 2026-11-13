@@ -1,0 +1,27 @@
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.8.2
+    command: ["start-dev"]
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: ${KEYCLOAK_ADMIN}
+      KC_BOOTSTRAP_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
+    ports:
+      - "127.0.0.1:8081:8080"
+    volumes:
+      - keycloak_data:/opt/keycloak/data
+
+  opa:
+    image: openpolicyagent/opa:1.0.1
+    command:
+      - run
+      - --server
+      - --addr=0.0.0.0:8181
+      - --watch
+      - /policies
+    ports:
+      - "127.0.0.1:8182:8181"
+    volumes:
+      - ./policies:/policies:ro
+
+volumes:
+  keycloak_data:
