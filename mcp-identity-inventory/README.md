@@ -36,3 +36,14 @@ The tools only read data. Listed identity permissions are sample
 inventory data, not authorization rules enforced by this server.
 
 Lesson 2 complete: sample inventory and all three tools implemented.
+
+
+## Run the MCP client
+
+Activate the virtual environment, then run:
+
+```bash
+python client.py
+
+
+
