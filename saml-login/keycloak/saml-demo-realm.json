@@ -1,0 +1,49 @@
+{
+  "realm": "saml-demo",
+  "enabled": true,
+  "sslRequired": "external",
+  "registrationAllowed": false,
+  "clients": [
+    {
+      "clientId": "http://localhost:8000/saml/metadata",
+      "name": "FastAPI SAML Login",
+      "protocol": "saml",
+      "enabled": true,
+      "frontchannelLogout": true,
+      "redirectUris": [
+        "http://localhost:8000/saml/acs"
+      ],
+      "attributes": {
+        "saml.authnstatement": "true",
+        "saml.server.signature": "true",
+        "saml.server.signature.keyinfo.ext": "false",
+        "saml.assertion.signature": "true",
+        "saml.client.signature": "false",
+        "saml.encrypt": "false",
+        "saml.force.post.binding": "true",
+        "saml_name_id_format": "username",
+        "saml_assertion_consumer_url_post": "http://localhost:8000/saml/acs",
+        "saml.signature.algorithm": "RSA_SHA256"
+      }
+    }
+  ],
+  "users": [
+    {
+      "username": "bob",
+      "enabled": true,
+      "email": "bob@example.com",
+      "emailVerified": true,
+      "firstName": "Bob",
+      "lastName": "Learner",
+      "requiredActions": [],
+      "credentials": [
+        {
+          "type": "password",
+          "value": "LearnSAML123!",
+          "temporary": false
+        }
+      ]
+    }
+  ]
+}
+
