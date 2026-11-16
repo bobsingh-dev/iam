@@ -1,0 +1,27 @@
+[
+	{
+		"id": "user-001",
+		"name": "Bob",
+		"type": "user",
+		"roles": ["viewer"],
+		"permissions": ["documents:read"],
+		"last_used": "2026-11-15"
+	},
+	{
+
+		"id": "service-001",
+		"name": "backup-service",
+		"type": "service_account",
+		"roles": ["backup-reader"],
+		"permissions": ["backups:read"],
+		"last_used": "2026-07-01"
+	},
+	{
+		"id": "agent-001",
+		"name": "research-agent",
+		"type": "ai_agent",
+		"roles": ["researcher"],
+		"permissions": ["documents:read", "search:execute"],
+		"last_used": "2026-11-10"
+	}
+]
